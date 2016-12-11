@@ -13,7 +13,6 @@ public class MoneyUI : MonoBehaviour
 		moneyScript = GetComponent<Money> ();
 		moneyScript.addMoney (100);
 		moneyValue = moneyScript.getMoney;
-		moneyText.text = "Money: "+moneyValue+" ℛℳ";
-
+		moneyText.text = "Money:  ℛℳ"+moneyValue;
 	}
 }
