@@ -15,6 +15,9 @@ public class ParticleScoreSystem : MonoBehaviour {
 	private int scoreAmount;
 	[SerializeField]
 	private int particleCount;
+	[SerializeField]
+	private int range;
+	private bool scoreAdded = false;
 
 	void Start () {
 		particleSystem = GetComponent<ParticleSystem> ();
@@ -24,7 +27,22 @@ public class ParticleScoreSystem : MonoBehaviour {
 		//int particleCount = particleSystem.GetParticles(ParticleSystem.Particle[] oparticlees,;
 	}
 	public void AddPoint(){
+		ScoreCheck();
 		score += scoreAmount;
 		particleSystem.Emit (scoreAmount);
+	}
+	void ScoreCheck(){
+		int newNumber = score / range;
+			switch(newNumber){
+		case(1):
+			scoreAmount += 2;
+			scoreAdded = true;
+			break;
+		case(2):
+			scoreAmount += 4;
+			break;
+		default:
+			break;
+		}
 	}
 }

@@ -16,7 +16,5 @@ public class ScoreUI : MonoBehaviour {
 	
 	void Update () {
 		scoreText.text = ("Jews killed: " + score.score);
-
-
 	}
 }
