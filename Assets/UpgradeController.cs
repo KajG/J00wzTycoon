@@ -15,7 +15,7 @@ public class UpgradeController : MonoBehaviour {
 	}
 	
 	void Update () {
-		currentScore = score.score;
+		//currentScore = score.score;
 	}
 	public void BuyUpgrade1 ()
 	{
