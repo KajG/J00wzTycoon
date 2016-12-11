@@ -7,20 +7,23 @@ public class UpgradeController : MonoBehaviour {
 	public ParticleScoreSystem score;
 	int currentScore;
 	bool buy1 = true;
+	[SerializeField]
+	private int upgradePrice;
 
 	void Start () {
 		score = GetComponent<ParticleScoreSystem> ();
-		
 	}
 	
 	void Update () {
 		currentScore = score.score;
-		if (currentScore >= 100 && buy1) 
+	}
+	public void BuyUpgrade1 ()
+	{
+		if (currentScore >= upgradePrice && buy1) 
 		{
+			score.score -= 100;
 			score.scoreAmount += 2;
 			buy1 = false;
 		}
-
-
 	}
 }
