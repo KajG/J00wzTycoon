@@ -10,7 +10,7 @@ public class ParticleScoreSystem : MonoBehaviour {
 	[SerializeField]
 	private int burstAmount;
 	[SerializeField]
-	private int score;
+	public int score;
 	[SerializeField]
 	private int scoreAmount;
 	[SerializeField]
