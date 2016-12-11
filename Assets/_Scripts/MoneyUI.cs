@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class MoneyUI : MonoBehaviour {
+public class MoneyUI : MonoBehaviour 
+{
+	[SerializeField]private Text moneyText;
+	private float moneyValue;
+	private Money moneyScript;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	private void Start()
+	{
+		moneyScript = GetComponent<Money> ();
+		moneyScript.addMoney (100);
+		moneyValue = moneyScript.getMoney;
+		moneyText.text = "Money: "+moneyValue+" ℛℳ";
+
 	}
 }
