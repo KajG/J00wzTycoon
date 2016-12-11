@@ -5,14 +5,16 @@ using UnityEngine.UI;
 public class MoneyUI : MonoBehaviour 
 {
 	[SerializeField]private Text moneyText;
-	private float moneyValue;
 	private Money moneyScript;
 
 	private void Start()
 	{
-		moneyScript = GetComponent<Money> ();
-		moneyScript.addMoney (100);
-		moneyValue = moneyScript.getMoney;
-		moneyText.text = "Money:  ℛℳ"+moneyValue;
+		this.moneyScript = GetComponent<Money> ();
+		this.updateUI ();
+	}
+
+	public void updateUI()
+	{
+		this.moneyText.text = "Money:  ℛℳ"+this.moneyScript.getMoney;
 	}
 }
